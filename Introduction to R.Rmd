@@ -61,17 +61,21 @@ output: html_document
 
 
 ```{r }
-
+    emp_status <- factor(c("Employed","unemployed","Self-Employed",
+                           "Employed","unemployed","Self-Employed",
+                           "Employed","unemployed","Self-Employed",
+                           "Employed","unemployed","Self-Employed"))
 ```
 
 
 ```{r }
-
+    levels(emp_status)
+    table(emp_status)
 ```
 
 
 ```{r }
-
+    unclass(emp_status)
 ```
 
 
