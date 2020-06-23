@@ -402,6 +402,20 @@ summary {
 2. Display the levels and the factor variable as a table.<br />
 3. Unclass the elements of the factor variable.</p>
 <pre class="r"><code>#### Start solution ####</code></pre>
+<pre class="r"><code>    emp_status &lt;- factor(c(&quot;Employed&quot;,&quot;unemployed&quot;,&quot;Self-Employed&quot;,
+                           &quot;Employed&quot;,&quot;unemployed&quot;,&quot;Self-Employed&quot;,
+                           &quot;Employed&quot;,&quot;unemployed&quot;,&quot;Self-Employed&quot;,
+                           &quot;Employed&quot;,&quot;unemployed&quot;,&quot;Self-Employed&quot;))</code></pre>
+<pre class="r"><code>    levels(emp_status)</code></pre>
+<pre><code>## [1] &quot;Employed&quot;      &quot;Self-Employed&quot; &quot;unemployed&quot;</code></pre>
+<pre class="r"><code>    table(emp_status)</code></pre>
+<pre><code>## emp_status
+##      Employed Self-Employed    unemployed 
+##             4             4             4</code></pre>
+<pre class="r"><code>    unclass(emp_status)</code></pre>
+<pre><code>##  [1] 1 3 2 1 3 2 1 3 2 1 3 2
+## attr(,&quot;levels&quot;)
+## [1] &quot;Employed&quot;      &quot;Self-Employed&quot; &quot;unemployed&quot;</code></pre>
 <pre class="r"><code>#### End solution ####</code></pre>
 </div>
 <div id="question-3" class="section level3">
@@ -417,6 +431,16 @@ e. Diane is here for information.<br />
 3. For customers that do not have a value, use NA as placeholder.<br />
 4. Print the number of rows, columns and names for the data frame.</p>
 <pre class="r"><code>#### Start solution ####</code></pre>
+<pre class="r"><code>    bank_customers &lt;- data.frame(CustomerID=c(&quot;Alicia&quot;,&quot;Nancy&quot;,
+                                              &quot;Fernando&quot;,&quot;Louis&quot;,&quot;Diane&quot;), 
+                                 hasAccount=c(&quot;No&quot;,&quot;Yes&quot;,
+                                              &quot;Yes&quot;,&quot;Yes&quot;,&quot;NA&quot;), 
+                                 totalBalance=c(&quot;NA&quot;,&quot;usd 10,000&quot;,
+                                              &quot;usd 100&quot;,&quot;usd 2,000&quot;,&quot;NA&quot;))</code></pre>
+<pre class="r"><code>    nrow(bank_customers)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>    ncol(bank_customers)</code></pre>
+<pre><code>## [1] 3</code></pre>
 <pre class="r"><code>#### End solution ####</code></pre>
 </div>
 <div id="good-job-you-have-successfully-completed-the-section" class="section level3">
