@@ -457,6 +457,42 @@ e. Diane is here for information.<br />
 1. Create a while loop and increase the value of var at each iteration.<br />
 2. When you reach the 10th prime number, terminate the loop and print the number.</p>
 <pre class="r"><code>#### Start solution ####</code></pre>
+<pre class="r"><code>###Question 1(part 1)
+###check prime function
+    check.prime &lt;- function(num) {
+        if (any(num %% 2:(num-1) == 0)) {
+            FALSE
+        } else {
+        TRUE
+        }
+    }
+    mynum = c(1:100)
+
+    for(i in mynum){
+        if(i==1 || i==2){
+            mynum[i] &lt;- i
+        }else{
+            if((check.prime(i))==TRUE){
+                mynum[i] &lt;- i
+            }else{
+                mynum[i] &lt;- NA
+            }
+        }
+    }
+    mynum &lt;- mynum[!is.na(mynum)]
+
+    ###Question 1(part 2)
+    var &lt;- 1
+    prime_index = 10
+    while(TRUE){
+        if(var == prime_index){
+            print(mynum[var])
+            break
+        }else{
+        var &lt;- var+1
+        }
+    }</code></pre>
+<pre><code>## [1] 23</code></pre>
 <pre class="r"><code>#### End solution ####</code></pre>
 </div>
 <div id="question-2-1" class="section level3">

@@ -155,34 +155,34 @@ output: html_document
     check.prime <- function(num) {
         if (any(num %% 2:(num-1) == 0)) {
             FALSE
-        } else { 
+        } else {
         TRUE
         }
     }
     mynum = c(1:100)
-    
+
     for(i in mynum){
         if(i==1 || i==2){
-            x[i] <- i
+            mynum[i] <- i
         }else{
             if((check.prime(i))==TRUE){
-                x[i] <- i
+                mynum[i] <- i
             }else{
-                x[i] <- NA
+                mynum[i] <- NA
             }
         }
     }
-    x <- x[!is.na(x)]
-    
+    mynum <- mynum[!is.na(mynum)]
+
     ###Question 1(part 2)
     var <- 1
     prime_index = 10
     while(TRUE){
         if(var == prime_index){
-            print(x[var])
+            print(mynum[var])
             break
         }else{
-        var <- var+1 
+        var <- var+1
         }
     }
     
