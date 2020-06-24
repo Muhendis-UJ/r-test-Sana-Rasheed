@@ -150,12 +150,45 @@ output: html_document
 
 
 ```{r }
-
+#Question 1(part 1)
+#check prime function
+check.prime <- function(num) {
+   if (any(num %% 2:(num-1) == 0)) {
+      FALSE
+   } else { 
+      TRUE
+   }
+}
+    mynum = c(1:100)
+    
+    for(i in mynum){
+        if(i==1 || i==2){
+            x[i] <- i
+        }else{
+            if((check.prime(i))==TRUE){
+                x[i] <- i
+            }else{
+                x[i] <- NA
+            }
+        }
+    }
+    x <- x[!is.na(x)]
+    
 ```
 
 
 ```{r }
-
+    #Question 1(part 2)
+    var <- 1
+    prime_index = 10
+    while(TRUE){
+        if(var == prime_index){
+            print(x[var])
+            break
+        }else{
+        var <- var+1 
+        }
+    }
 ```
 
 
