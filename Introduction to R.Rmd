@@ -533,7 +533,8 @@ output: html_document
 
 ```{r }
     numbers <- seq(100,150)
-    numbers
+    mean(numbers)
+    sd(numbers)
 ```
 
 

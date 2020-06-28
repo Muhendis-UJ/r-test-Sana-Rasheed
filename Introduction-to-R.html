@@ -619,17 +619,17 @@ e. Diane is here for information.<br />
 <pre class="r"><code>    curr_date &lt;- Sys.Date()
     curr_time &lt;- as.POSIXlt(Sys.time())
     curr_date</code></pre>
-<pre><code>## [1] &quot;2020-06-28&quot;</code></pre>
+<pre><code>## [1] &quot;2020-06-29&quot;</code></pre>
 <pre class="r"><code>    curr_time</code></pre>
-<pre><code>## [1] &quot;2020-06-28 12:30:06 PKT&quot;</code></pre>
+<pre><code>## [1] &quot;2020-06-29 00:06:33 PKT&quot;</code></pre>
 <pre class="r"><code>    curr_time$wday</code></pre>
-<pre><code>## [1] 0</code></pre>
+<pre><code>## [1] 1</code></pre>
 <pre class="r"><code>    curr_time$year</code></pre>
 <pre><code>## [1] 120</code></pre>
 <pre class="r"><code>    curr_time$sec</code></pre>
-<pre><code>## [1] 6.575441</code></pre>
+<pre><code>## [1] 33.82591</code></pre>
 <pre class="r"><code>    curr_time$hour</code></pre>
-<pre><code>## [1] 12</code></pre>
+<pre><code>## [1] 0</code></pre>
 <pre class="r"><code>#### End solution ####</code></pre>
 </div>
 <div id="question-2-3" class="section level3">
@@ -641,7 +641,7 @@ e. Diane is here for information.<br />
 <pre class="r"><code>    a &lt;- as.POSIXct(Sys.time())
     b &lt;- as.POSIXct(&quot;2020-6-27 21:00:00&quot;,tz = &quot;Etc/GMT-5&quot;)
     a-b</code></pre>
-<pre><code>## Time difference of 15.50214 hours</code></pre>
+<pre><code>## Time difference of 1.129567 days</code></pre>
 <pre class="r"><code>#### End solution ####</code></pre>
 </div>
 <div id="good-job-you-have-successfully-completed-the-section-4" class="section level3">
@@ -655,10 +655,10 @@ e. Diane is here for information.<br />
 <p><strong>Create a function to calculate mean and standard deviation of the provided data</strong> 1. Create a sequence of numbers from 100 to 150 store in a variable called numbers. 1. Use lapply, sapply, apply and tapply to implement the functions on “numbers” [only on the second half of the sequence for tapply]</p>
 <pre class="r"><code>#### Start solution ####</code></pre>
 <pre class="r"><code>    numbers &lt;- seq(100,150)
-    numbers</code></pre>
-<pre><code>##  [1] 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118
-## [20] 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137
-## [39] 138 139 140 141 142 143 144 145 146 147 148 149 150</code></pre>
+    mean(numbers)</code></pre>
+<pre><code>## [1] 125</code></pre>
+<pre class="r"><code>    sd(numbers)</code></pre>
+<pre><code>## [1] 14.86607</code></pre>
 <pre class="r"><code>#### End solution ####</code></pre>
 </div>
 <div id="question-2-4" class="section level3">
