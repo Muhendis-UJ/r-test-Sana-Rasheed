@@ -328,7 +328,17 @@ output: html_document
 
 
 ```{r }
-
+    allConditionsMeet <- function(a, b){
+      print(a)
+      print(b)
+      if(a == b){
+        return(TRUE)
+      }else{
+        return(FALSE)
+      }
+    }
+    c <- allConditionsMeet(5,5)
+    c
 ```
 
 
@@ -375,12 +385,22 @@ output: html_document
 
 
 ```{r }
-
+    matrix_1 = matrix(1:6,2,3)
+    matrix_2 = matrix(1:6,3,2)
+    #matrix multiplication cannot perform because different dimension
+    matrix_1 %*% matrix_2
 ```
 
 
 ```{r }
-
+    my_mat = matrix(1:4,2,2)
+        my_mat
+    deter <- function(a){
+      r <- nrow(a)
+      c <- ncol(a)
+      return(a[1,1]*a[2,2] - a[1,2]*a[2,1])
+    }
+    deter(my_mat)
 ```
 
 
@@ -419,7 +439,14 @@ output: html_document
 
 
 ```{r }
-
+    curr_date <- Sys.Date()
+    curr_time <- as.POSIXlt(Sys.time())
+    curr_date
+    curr_time
+    curr_time$wday
+    curr_time$year
+    curr_time$sec
+    curr_time$hour
 ```
 
 
@@ -459,7 +486,9 @@ output: html_document
 
 
 ```{r }
-
+    a <- as.POSIXct(Sys.time())
+    b <- as.POSIXct("2020-6-27 21:00:00",tz = "Etc/GMT-5")
+    a-b
 ```
 
 
@@ -503,7 +532,8 @@ output: html_document
 
 
 ```{r }
-
+    numbers <- seq(100,150)
+    numbers
 ```
 
 
@@ -543,7 +573,11 @@ output: html_document
 
 
 ```{r }
-
+    mymat <- matrix(1:16,4,4)
+    rmeans = rowMeans(mymat)
+    cmeans = colMeans(mymat)
+    paste(c("Row-wise mean = ",rmeans),collapse=" ")
+    paste(c("Col-wise mean = ",cmeans),collapse=" ")
 ```
 
 
@@ -592,6 +626,8 @@ library(datasets)
 
 ```{r }
 head(Orange)
+split_data <- Orange$circumference
+split_data
 ```
 
 
